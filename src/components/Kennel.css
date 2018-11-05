@@ -1,0 +1,15 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+#root {
+  width: 90%;
+  margin: auto;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  text-align: center;
+  background-color: beige;
+  border: 2px solid;
+  font-weight: bold;
+  border-radius: 10px;
+}

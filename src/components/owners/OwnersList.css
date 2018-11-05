@@ -1,0 +1,13 @@
+.owners {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+h4 {
+  font-size: 4vw;
+  font-weight: bold;
+}
+.owners > h5 {
+  font-size: 3vw;
+  font-weight: bold;
+  padding-bottom: 2vw;
+}

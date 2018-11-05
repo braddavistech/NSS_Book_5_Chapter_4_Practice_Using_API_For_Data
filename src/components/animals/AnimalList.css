@@ -1,0 +1,12 @@
+header {
+  margin-top: 2vw;
+}
+.animal > h4 {
+  font-size: 4vw;
+  padding-top: 2vw;
+  font-weight: bold;
+}
+.animal > h5 {
+  font-size: 3vw;
+  font-weight: bold;
+}
