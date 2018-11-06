@@ -53,7 +53,7 @@ export default class ApplicationViews extends Component {
           return <OwnersList animals={this.state.animals} owners={this.state.owners} />
         }} />
         <Route exact path="/search" render={(props) => {
-          console.log(this.state.searchValue)
+          console.log(this.searchValue)
           return <SearchList searchValue={this.state.searchValue} animals={this.state.animals} employees={this.state.employees} owners={this.state.owners} locations={this.state.locations} />
         }} />
       </React.Fragment>

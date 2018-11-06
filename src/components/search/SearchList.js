@@ -39,16 +39,11 @@ export default class SearchList extends Component {
   // }
 
   render() {
-    console.log(this.props.searchValue)
+    console.log(this.searchValue)
     return (
-      <div>
-        <header>SEARCH LIST</header>
-        <h4>Search Animals</h4>
-        {
-          this.props.animals.map(animal =>
-            <p key={animal.id}>{animal.name}</p>
-        )
-          }
+      <div id="searchBox">
+         {/* <header>SEARCH LIST</header>
+        <h4>Search Animals</h4> */}
         <header></header>
       </div>
     )

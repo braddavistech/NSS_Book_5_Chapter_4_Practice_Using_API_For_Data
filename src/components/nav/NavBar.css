@@ -5,3 +5,30 @@ input {
   margin: 1vw;
   display: inline-flex;
 }
+#searchResults {
+  display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  text-align: center;
+  background-color: beige;
+  border: 2px solid;
+  font-weight: bold;
+  border-radius: 10px;
+}
+#searchResults > h2 {
+font-size: 5vw;
+margin-top: 2vw;
+font-weight: bold;
+}
+#searchResults > h3 {
+  font-size: 3.5vw;
+  margin-bottom: 2vw;
+  font-weight: bold;
+  }
+#searchResults > section > h3 {
+font-size: 3.5vw;
+margin-bottom: 2vw;
+font-weight: bold;
+}

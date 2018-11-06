@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
+import ReactDOM from 'react-dom';
 // import SearchList from './search/SearchList'
 import "./NavBar.css"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -17,7 +18,8 @@ class NavBar extends Component {
     // this.setState({searchValue: event.target.value});
     // console.log(event.target.value)
     this.searchAPI(event.target.value)
-    return this.searchValue;
+    // return this.searchValue;
+
   }
 
   searchAPI = (newSearch) => {
@@ -38,9 +40,10 @@ class NavBar extends Component {
         newState.searchValue = newSearch;
         this.setState(this.searchValue = newState)
         console.log(this.searchValue)
-
+        this.searchRender(this.searchValue)
       })
-      return this.searchValue
+
+    return newSearch
   }
 
   render() {
@@ -69,6 +72,47 @@ class NavBar extends Component {
         </ul>
       </nav>
     )
+  }
+
+  searchRender(searchThis) {
+    console.log(this.searchValue)
+    return ReactDOM.render(
+      (
+        <div id="searchResults">
+          <header>SEARCH LIST</header>
+          <h2>Search Animals</h2>
+          {
+            searchThis.animals.map(animal =>
+              <h3 className="animal" key={animal.id}>{animal.name}, {animal.breed}</h3>
+            )
+          }
+          <h2>Search Owners</h2>
+          {
+            searchThis.owners.map(owner =>
+              < section className="owners" key={owner.id} >
+                <h3>{owner.name}</h3>
+              </section>
+            )
+          }
+          <h2>Search Employees</h2>
+          {
+            searchThis.employees.map(employee =>
+              < section className="employee" key={employee.id} >
+                <h3>{employee.name}</h3>
+              </section>
+            )
+          }
+          <h2>Search Locations</h2>
+          {
+            searchThis.locations.map(location =>
+              < section className="location" key={location.id} >
+                <h3>{location.name}</h3>
+              </section>
+            )
+          }
+        </div>
+      ), document.getElementById('search'));
+
   }
 }
 
